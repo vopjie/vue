@@ -72,6 +72,14 @@
                 </div>
               </a>
             </li>
+            <li class="">
+              <a v-link="{ path: '/charts' }">
+                <div class="weui-flex js_category">
+                    <p class="weui-flex__item">图表</p>
+                    <img src="./assets/images/icon_nav_nav.png" alt="">
+                </div>
+              </a>
+            </li>
         </ul>
     </div>
   </div>
