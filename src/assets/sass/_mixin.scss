@@ -2191,13 +2191,13 @@
       }
     }
 }
-@mixin perspective($duration:1s,$timing-function:linear,$delay:0s,$infinite:false){
+@mixin flipInY($duration:1s,$timing-function:linear,$delay:0s,$infinite:false){
     @if $infinite == true {
-        -webkit-animation: perspective $duration $timing-function $delay infinite;
-        animation: perspective $duration $timing-function $delay infinite;
+        -webkit-animation: flipInY $duration $timing-function $delay infinite;
+        animation: flipInY $duration $timing-function $delay infinite;
     } @else {
-        -webkit-animation: perspective $duration $timing-function $delay;
-        animation: perspective $duration $timing-function $delay;
+        -webkit-animation: flipInY $duration $timing-function $delay;
+        animation: flipInY $duration $timing-function $delay;
     }
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
@@ -4059,7 +4059,7 @@
 // $icons: sprite-map("icon/*.png");
 //
 // 或者引用_icons.scss
-@import "icons";
+// @import "icons";
 @mixin backImg ($icons,$name) {
     width: px2rem(image-width(sprite-file($icons, $name)));
     height: px2rem(image-height(sprite-file($icons, $name)));

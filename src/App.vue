@@ -1,108 +1,129 @@
 <template>
-<section class="index container">
-
-  <div class="logo">
-    <img src="./assets/images/logo.png">
+  <div id="container" class="index">
+    <section>
+      <div class="logo">
+        <img class="flipInY" src="./assets/images/logo.png">
+        <p>version:1.0.28</p>
+      </div>
+      <div class="row">
+        <div class="page__bd page__bd_spacing">
+            <ul>
+                <li>
+                  <a v-link="{ path: '/swiper' }">
+                    <div class="weui-flex js_category">
+                        <p class="weui-flex__item">Swiper</p>
+                        <img src="./assets/images/icon_nav_nav.png" alt="">
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a v-link="{ path: '/form', query: { id: 1991,name:'揭志勇' }}">
+                    <div class="weui-flex js_category">
+                        <p class="weui-flex__item">Form</p>
+                        <img src="./assets/images/icon_nav_nav.png" alt="">
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a v-link="{ path: '/page' }">
+                    <div class="weui-flex js_category">
+                        <p class="weui-flex__item">PullDown && PullUp </p>
+                        <img src="./assets/images/icon_nav_nav.png" alt="">
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a v-link="{ path: '/filter' }">
+                    <div class="weui-flex js_category">
+                        <p class="weui-flex__item">Fliter</p>
+                        <img src="./assets/images/icon_nav_nav.png" alt="">
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a v-link="{ path: '/search' }">
+                    <div class="weui-flex js_category">
+                        <p class="weui-flex__item">Search with Fliter</p>
+                        <img src="./assets/images/icon_nav_nav.png" alt="">
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a v-link="{ path: '/dialog' }">
+                    <div class="weui-flex js_category">
+                        <p class="weui-flex__item">Dialog</p>
+                        <img src="./assets/images/icon_nav_nav.png" alt="">
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a v-link="{ path: '/loading' }">
+                    <div class="weui-flex js_category">
+                        <p class="weui-flex__item">Loading</p>
+                        <img src="./assets/images/icon_nav_nav.png" alt="">
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a v-link="{ path: '/toast' }">
+                    <div class="weui-flex js_category">
+                        <p class="weui-flex__item">Toast</p>
+                        <img src="./assets/images/icon_nav_nav.png" alt="">
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a v-link="{ path: '/notice' }">
+                    <div class="weui-flex js_category">
+                        <p class="weui-flex__item">Notice</p>
+                        <img src="./assets/images/icon_nav_nav.png" alt="">
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a v-link="{ path: '/charts' }">
+                    <div class="weui-flex js_category">
+                        <p class="weui-flex__item">Charts</p>
+                        <img src="./assets/images/icon_nav_nav.png" alt="">
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a v-link="{ path: '/person' }">
+                    <div class="weui-flex js_category">
+                        <p class="weui-flex__item">Person</p>
+                        <img src="./assets/images/icon_nav_nav.png" alt="">
+                    </div>
+                  </a>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </section>
+    <router-view transition="outLeftInRight"></router-view>
   </div>
-  <div class="row">
-    <div class="col-xs-4 col-md-3 col-lg-2"></div>
-    <div class="page__bd page__bd_spacing">
-        <ul>
-            <li class="">
-              <a v-link="{ path: '/slide' }">
-                <div class="weui-flex js_category">
-                    <p class="weui-flex__item">轮播</p>
-                    <img src="./assets/images/icon_nav_nav.png" alt="">
-                </div>
-              </a>
-            </li>
-            <li class="">
-              <a v-link="{ path: '/form' }">
-                <div class="weui-flex js_category">
-                    <p class="weui-flex__item">表单</p>
-                    <img src="./assets/images/icon_nav_nav.png" alt="">
-                </div>
-              </a>
-            </li>
-            <li class="">
-              <a v-link="{ path: '/table' }">
-                <div class="weui-flex js_category">
-                    <p class="weui-flex__item">表格</p>
-                    <img src="./assets/images/icon_nav_nav.png" alt="">
-                </div>
-              </a>
-            </li>
-            <li class="">
-              <a v-link="{ path: '/loading' }">
-                <div class="weui-flex js_category">
-                    <p class="weui-flex__item">加载</p>
-                    <img src="./assets/images/icon_nav_nav.png" alt="">
-                </div>
-              </a>
-            </li>
-            <li class="">
-              <a v-link="{ path: '/page' }">
-                <div class="weui-flex js_category">
-                    <p class="weui-flex__item">普通分页</p>
-                    <img src="./assets/images/icon_nav_nav.png" alt="">
-                </div>
-              </a>
-            </li>
-            <li class="">
-              <a v-link="{ path: '/page-pull' }">
-                <div class="weui-flex js_category">
-                    <p class="weui-flex__item">上拉加载 & 下拉刷新</p>
-                    <img src="./assets/images/icon_nav_nav.png" alt="">
-                </div>
-              </a>
-            </li>
-            <li class="">
-              <a v-link="{ path: '/filter' }">
-                <div class="weui-flex js_category">
-                    <p class="weui-flex__item">搜索过滤</p>
-                    <img src="./assets/images/icon_nav_nav.png" alt="">
-                </div>
-              </a>
-            </li>
-            <li class="">
-              <a v-link="{ path: '/dialog' }">
-                <div class="weui-flex js_category">
-                    <p class="weui-flex__item">提示弹框</p>
-                    <img src="./assets/images/icon_nav_nav.png" alt="">
-                </div>
-              </a>
-            </li>
-            <li class="">
-              <a v-link="{ path: '/charts' }">
-                <div class="weui-flex js_category">
-                    <p class="weui-flex__item">图表</p>
-                    <img src="./assets/images/icon_nav_nav.png" alt="">
-                </div>
-              </a>
-            </li>
-        </ul>
-    </div>
-  </div>
-</section>
-<router-view></router-view>
 </template>
 
 <script>
-// import Hello from './components/Hello'
-//
-// export default {
-//   components: {
-//     Hello
-//   }
-// }
+module.exports = {
+
+}
 </script>
 
 <style lang="scss">
+.weui-btn_primary {
+  background-color: #41b883 !important;
+}
+.weui-btn_disabled {opacity: .8;}
+#container {position: relative;width: 100%;height: 100%;}
+section {width: 100%;top: 0;left: 0;position: fixed;background-color: #f8f8f8;height: 100vh;overflow-y: scroll;}
 body,html{height:100%;-webkit-tap-highlight-color:transparent}
-body{font-family:-apple-system-font,Helvetica Neue,Helvetica,sans-serif;background-color: #f8f8f8;color: #555;}
+body{font-family:-apple-system-font,Helvetica Neue,Helvetica,sans-serif;color: #555;font-size: 14px;}
 ul{list-style:none}
 .index {
-  .logo {text-align: center;line-height: 0;}
+  .logo {text-align: center;
+    p {font-size: .5rem;color:#999;margin-bottom: 10px;}
+  }
   body{background-color:#f8f8f8}
   .container{overflow:hidden}
   ul {margin-bottom: 5px;overflow: hidden;}
@@ -120,42 +141,16 @@ ul{list-style:none}
   }
   .weui-flex{padding:20px;-webkit-box-align:center;-webkit-align-items:center;align-items:center;-webkit-transition:.3s;transition:.3s}
 }
-.animated{-webkit-animation-duration:0.4s;animation-duration:0.4s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
-.animated.infinite{-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}
-@-webkit-keyframes slideInLeft{
-    0%{-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0);visibility:visible}
-    100%{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+@import "./assets/sass/_mixin.scss";
+.flipInY {@include flipInY();}
+.outLeftInRight-transition {
+
 }
-@keyframes slideInLeft{
-    0%{-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0);visibility:visible}
-    100%{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+.outLeftInRight-enter {
+  z-index: 2;
+  @include slideInRight(.4s,ease-out,0s,false);
 }
-.slideInLeft{-webkit-animation-name:slideInLeft;animation-name:slideInLeft}
-@-webkit-keyframes slideInRight{
-    0%{-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0);visibility:visible}
-    100%{-webkit-transform:translate3d(0,0,0);transform:translate3d(0)}
+.outLeftInRight-leave {
+  @include slideOutLeft(.4s,ease-out,0s,false);
 }
-@keyframes slideInRight{
-    0%{-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0);visibility:visible}
-    100%{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
-}
-.slideInRight{-webkit-animation-name:slideInRight;animation-name:slideInRight}
-@-webkit-keyframes slideOutLeft{
-    0%{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
-    100%{visibility:hidden;-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%)}
-}
-@keyframes slideOutLeft{
-    0%{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
-    100%{visibility:hidden;-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}
-}
-.slideOutLeft{-webkit-animation-name:slideOutLeft;animation-name:slideOutLeft}
-@-webkit-keyframes slideOutRight{
-    0%{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
-    100%{visibility:hidden;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%)}
-}
-@keyframes slideOutRight{
-    0%{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
-    100%{visibility:hidden;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}
-}
-.slideOutRight{-webkit-animation-name:slideOutRight;animation-name:slideOutRight}
 </style>
