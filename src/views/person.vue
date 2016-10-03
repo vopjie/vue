@@ -24,13 +24,13 @@
               <img src="../assets/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
               <p class="weui-tabbar__label">Home</p>
           </a>
-          <a class="weui-tabbar__item" v-link="{ path: '/swiper' }">
+          <a class="weui-tabbar__item" v-link="{ path: '/search' }">
               <img src="../assets/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
-              <p class="weui-tabbar__label">Swiper</p>
+              <p class="weui-tabbar__label">Search</p>
           </a>
           <a class="weui-tabbar__item" v-link="{ path: '/charts' }">
               <img src="../assets/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
-              <p class="weui-tabbar__label">C harts</p>
+              <p class="weui-tabbar__label">Charts</p>
           </a>
           <a class="weui-tabbar__item weui-bar__item_on" v-link="{ path: '/person' }">
               <img src="../assets/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">

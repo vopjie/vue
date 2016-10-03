@@ -16,6 +16,12 @@ Vue.filter('timestampFormat', require('./filters/timestampFormatter'))
 // vue-resource
 const VueResource = require('vue-resource')
 Vue.use(VueResource)
+// vue-touch
+var VueTouch = require('vue-touch')
+VueTouch.config.swipe = {
+  direction: 'horizontal'
+}
+Vue.use(VueTouch)
 // vue-router
 var VueRouter = require('vue-router')
 Vue.use(VueRouter)

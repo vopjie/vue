@@ -45,6 +45,10 @@ module.exports = function (router) {
       name: 'search',
       component: require('./views/search.vue')
     },
+    '/touch': {
+      name: 'touch',
+      component: require('./views/touch.vue')
+    },
     '/dialog': {
       name: 'dialog',
       component: require('./views/dialog.vue')
