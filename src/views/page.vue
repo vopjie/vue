@@ -68,7 +68,13 @@ module.exports = {
         headers: {'Authorization': 'Basic YXBpOnBhc3N3b3Jk'},
         emulateJSON: true
       }).then(function (response) {
-        let data = response.body
+        let data
+        var contentType = response.headers.get('Content-Type')
+        if (typeof contentType === 'string' && contentType.indexOf('application/json') === 0) {
+          data = response.body
+        } else {
+          data = JSON.parse(response.body)
+        }
         if (data.code === '0') {
           if (data.data.list.length === '0') {
             this.showTip = true
