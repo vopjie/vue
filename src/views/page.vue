@@ -36,6 +36,9 @@
   </section>
 </template>
 <script>
+// vue-resource
+var VueResource = require('vue-resource')
+Vue.use(VueResource)
 import Loadmore from '../components/loadmore'
 module.exports = {
   components: {Loadmore},

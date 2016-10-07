@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="weui-tabbar">
-        <a class="weui-tabbar__item" v-link="{ path: '/index' }">
+        <a class="weui-tabbar__item" v-link="{ path: '/' }">
             <img src="../../static/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
             <p class="weui-tabbar__label">Home</p>
         </a>
@@ -28,7 +28,7 @@
             <img src="../../static/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
             <p class="weui-tabbar__label">Search</p>
         </a>
-        <a class="weui-tabbar__item" v-link="{ path: '/charts' }">
+        <a class="weui-tabbar__item" href="/charts.html">
             <img src="../../static/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
             <p class="weui-tabbar__label">Charts</p>
         </a>

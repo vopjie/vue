@@ -132,11 +132,3 @@ module.exports = {
   }
 }
 </script>
-
-<style lang="scss">
-  @import "../../static/sass/_mixin.scss";
-  .bounce {@include bounce();}
-  .logo {text-align: center;padding-top: .5rem;
-    img {width: 3rem;}
-  }
-</style>

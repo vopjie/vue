@@ -87,4 +87,43 @@ module.exports = {
     margin:0;
     height: 0;
   }
+  .weui-media-box_appmsg .weui-media__hd {
+    margin-right: .8em;
+    width: 1.6rem;
+    height: 1.6rem;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .weui-media-box_appmsg .weui-media__thumb {
+    width: 100%;
+    max-height: 100%;
+    vertical-align: top;
+  }
+  .weui-media-box_appmsg .weui-media__bd {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    min-width: 0;
+  }
+  .weui-media__title {
+    font-weight: 400;
+    font-size: 17px;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  .weui-media__desc {
+    color: #999999;
+    font-size: 13px;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
 </style>

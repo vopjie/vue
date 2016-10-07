@@ -13,48 +13,93 @@ router.map({
   },
   '/swiper': {
     name: 'swiper',
-    component: require('../../views/swiper.vue')
+    // component: require('../../views/swiper.vue')
+    component:function(resolve){
+      require.ensure(['../../views/swiper.vue'], function(){
+        resolve(require('../../views/swiper.vue'));
+      });
+    }
   },
   '/form': {
     name: 'form',
-    component: require('../../views/form.vue')
+    component:function(resolve){
+      require.ensure(['../../views/form.vue'], function(){
+        resolve(require('../../views/form.vue'));
+      });
+    }
   },
   '/person': {
     name: 'person',
-    component: require('../../views/person.vue'),
+    component:function(resolve){
+      require.ensure(['../../views/person.vue'], function(){
+        resolve(require('../../views/person.vue'));
+      });
+    },
     needLogin: true
   },
   '/page': {
     name: 'page',
-    component: require('../../views/page.vue')
+    component:function(resolve){
+      require.ensure(['../../views/page.vue'], function(){
+        resolve(require('../../views/page.vue'));
+      });
+    }
   },
   '/notice': {
     name: 'notice',
-    component: require('../../views/notice.vue')
+    component:function(resolve){
+      require.ensure(['../../views/notice.vue'], function(){
+        resolve(require('../../views/notice.vue'));
+      });
+    }
   },
   '/loading': {
     name: 'loading',
-    component: require('../../views/loading.vue')
+    component:function(resolve){
+      require.ensure(['../../views/loading.vue'], function(){
+        resolve(require('../../views/loading.vue'));
+      });
+    }
   },
   '/toast': {
     name: 'toast',
-    component: require('../../views/toast.vue')
+    component:function(resolve){
+      require.ensure(['../../views/toast.vue'], function(){
+        resolve(require('../../views/toast.vue'));
+      });
+    }
   },
   '/filter': {
     name: 'filter',
-    component: require('../../views/filter.vue')
+    component:function(resolve){
+      require.ensure(['../../views/filter.vue'], function(){
+        resolve(require('../../views/filter.vue'));
+      });
+    }
   },
   '/search': {
     name: 'search',
-    component: require('../../views/search.vue')
+    component:function(resolve){
+      require.ensure(['../../views/search.vue'], function(){
+        resolve(require('../../views/search.vue'));
+      });
+    }
   },
   '/touch': {
     name: 'touch',
-    component: require('../../views/touch.vue')
+    component:function(resolve){
+      require.ensure(['../../views/touch.vue'], function(){
+        resolve(require('../../views/touch.vue'));
+      });
+    }
   },
   '/dialog': {
     name: 'dialog',
-    component: require('../../views/dialog.vue')
+    component:function(resolve){
+      require.ensure(['../../views/dialog.vue'], function(){
+        resolve(require('../../views/dialog.vue'));
+      });
+    }
   }
 })
 router.beforeEach(function (transition) {
@@ -82,9 +127,6 @@ router.afterEach(function (transition) {
 //   '*': '/news/1'
 // })
 router.start(App, '#app')
-// vue-resource
-var VueResource = require('vue-resource')
-Vue.use(VueResource)
 // vue-touch
 var VueTouch = require('vue-touch')
 VueTouch.config.swipe = {

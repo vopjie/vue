@@ -11,13 +11,18 @@ module.exports = {
 </script>
 
 <style lang="scss">
+@import "../../../static/sass/_mixin.scss";
+.bounce {@include bounce();}
+.logo {text-align: center;padding-top: .5rem;
+  img {width: 3rem;}
+}
 .weui-btn_primary {
   background-color: #41b883 !important;
 }
 .weui-btn_disabled {opacity: .8;}
 #container {position: relative;width: 100%;height: 100%;}
 section {width: 100%;background-color: #f8f8f8;min-height: 100vh;}
-body,html{height:100%;-webkit-tap-highlight-color:transparent}
+body,html{-webkit-tap-highlight-color:transparent}
 body{font-family:-apple-system-font,Helvetica Neue,Helvetica,sans-serif;color: #555;font-size: 14px;overflow-x: hidden;}
 ul{list-style:none}
 .container {
@@ -41,7 +46,6 @@ ul{list-style:none}
   }
   .weui-flex{padding:20px;-webkit-box-align:center;-webkit-align-items:center;align-items:center;-webkit-transition:.3s;transition:.3s}
 }
-@import "static/sass/_mixin.scss";
 .flipInY {@include flipInY();}
 .fade-transition {
 
@@ -52,5 +56,4 @@ ul{list-style:none}
 .fade-leave {
   @include fadeOut(.1s,ease,0s,false);
 }
-
 </style>
