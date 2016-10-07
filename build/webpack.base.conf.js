@@ -4,9 +4,8 @@ var utils = require('./utils')
 var projectRoot = path.resolve(__dirname, '../')
 
 module.exports = {
-  entry: {
-    app: './src/main.js'
-  },
+  // 获取多入口, 注意这个路径， 至于为什么是 ./src仍然需要了解，我觉得应该是 ../src
+  entry: utils.getEntries('./src/module/**/*.js'),
   output: {
     path: config.build.assetsRoot,
     publicPath: process.env.NODE_ENV === 'production' ? config.build.assetsPublicPath : config.dev.assetsPublicPath,
@@ -18,27 +17,17 @@ module.exports = {
     alias: {
       'src': path.resolve(__dirname, '../src'),
       'assets': path.resolve(__dirname, '../src/assets'),
-      'components': path.resolve(__dirname, '../src/components')
+      'components': path.resolve(__dirname, '../src/components'),
+      'echarts$': "echarts/src/echarts.js",
+      'echarts': "echarts/src",
+      'zrender$': "zrender/src/zrender.js",
+      'zrender': "zrender/src"
     }
   },
   resolveLoader: {
     fallback: [path.join(__dirname, '../node_modules')]
   },
   module: {
-    preLoaders: [
-      {
-        test: /\.vue$/,
-        loader: 'eslint',
-        include: projectRoot,
-        exclude: /node_modules/
-      },
-      {
-        test: /\.js$/,
-        loader: 'eslint',
-        include: projectRoot,
-        exclude: /node_modules/
-      }
-    ],
     loaders: [
       {
         test: /\.vue$/,
@@ -49,10 +38,6 @@ module.exports = {
         loader: 'babel',
         include: projectRoot,
         exclude: /node_modules/
-      },
-      {
-        test: /.scss$/,
-        loaders: ['style','css','sass']
       },
       {
         test: /\.json$/,
@@ -79,9 +64,6 @@ module.exports = {
         }
       }
     ]
-  },
-  eslint: {
-    formatter: require('eslint-friendly-formatter')
   },
   vue: {
     loaders: utils.cssLoaders()

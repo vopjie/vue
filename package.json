@@ -15,12 +15,14 @@
   "dependencies": {
     "babel-runtime": "^6.0.0",
     "echarts": "^3.2.3",
+    "iscroll": "^5.2.0",
     "moment": "^2.15.1",
     "swiper": "^3.3.1",
     "vue": "^1.0.21",
     "vue-resource": "^1.0.3",
     "vue-swiper": "^0.4.0",
-    "vue-touch": "^1.1.0"
+    "vue-touch": "^1.1.0",
+    "weui": "^1.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",

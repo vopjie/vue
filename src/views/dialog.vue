@@ -1,45 +1,41 @@
 <template>
   <section>
     <div class="logo">
-      <img class="bounce" src="../assets/images/logo.png">
+      <img class="bounce" src="../../static/images/logo.png">
     </div>
-    <div class="weui-btn-area">
-      <a class="weui-btn weui-btn_primary" href="javascript:;" v-on:click="showDialog">Dialog</a>
-    </div>
-    <dialog :options.sync="options" :show.sync="options.show"></dialog>
-    <toast :options.sync="toastOptions" :show.sync="toastOptions.show"></toast>
+    <button-area slot="operation">
+      <weui-button type="primary" @click="showDialog(1)">Dialog</weui-button>
+    </button-area>
+    <dialog v-if="dialog1Show" type="confirm" title="弹窗标题"
+      confirm-button="确认关闭" cancel-button="不关闭"
+      @weui-dialog-confirm="handleDialogAction('确定', 1)"
+      @weui-dialog-cancel="handleDialogAction('取消', 1)">
+      自定义弹窗内容
+      <br>
+      ...
+    </dialog>
   </section>
 </template>
 <script>
-import Dialog from '../components/Dialog'
-import Toast from '../components/Toast'
+import Dialog from '../components/dialog/dialog.vue'
+import ButtonArea from '../components/button/button-area.vue'
+import Button from '../components/button/button.vue'
 module.exports = {
-  components: {Dialog, Toast},
+  components: {Dialog, 'button-area': ButtonArea,'weui-button': Button},
   data: function () {
     return {
-      options: {},
-      toastOptions: {}
+      dialog1Show: false
     }
   },
   methods: {
-    showDialog: function (event) {
-      let self = this
-      this.options = {
-        confirm: true,
-        show: true,
-        autoClose: false,
-        title: '操作提示',
-        msg: '确认要这么做吗？',
-        cancelTxt: '取消',
-        confirmTxt: '确认',
-        confirmFunc: function () {
-          self.toastOptions = {
-            show: true,
-            autoClose: true,
-            msg: '已确认',
-            iconClass: 'weui-icon-success-no-circle weui-icon_toast'
-          }
-        }
+    showDialog: function (id) {
+      this[`dialog${id}Show`] = true
+    },
+    handleDialogAction(action, id) {
+      if (action === '确定') {
+        this[`dialog${id}Show`] = false
+      } else {
+        alert('你点击了“不关闭”，所以对话框不会消失^^')
       }
     }
   }

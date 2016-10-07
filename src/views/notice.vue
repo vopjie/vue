@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="logo">
-      <img class="bounce" src="../assets/images/logo.png">
+      <img class="bounce" src="../../static/images/logo.png">
     </div>
     <div class="weui-btn-area">
       <a class="weui-btn weui-btn_primary" href="javascript:;" v-on:click="showNotice">Notice</a>

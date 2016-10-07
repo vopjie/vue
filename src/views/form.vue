@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="logo">
-      <img class="bounce" src="../assets/images/logo.png">
+      <img class="bounce" src="../../static/images/logo.png">
     </div>
     <validator name="validation_login">
       <form>
@@ -29,7 +29,7 @@
           </span>
         </label>
         <div class="weui-btn-area">
-          <button class="weui-btn weui-btn_primary" v-bind:class="{ 'weui-btn_disabled': !telValid || !passwordValid || !agreenValid}" v-on:click='login()'>登录</button>
+          <button type="button" class="weui-btn weui-btn_primary" v-bind:class="{ 'weui-btn_disabled': !telValid || !passwordValid || !agreenValid}" v-on:click='login()'>登录</button>
         </div>
       </form>
     </validator>
@@ -134,7 +134,7 @@ module.exports = {
 </script>
 
 <style lang="scss">
-  @import "../assets/sass/_mixin.scss";
+  @import "../../static/sass/_mixin.scss";
   .bounce {@include bounce();}
   .logo {text-align: center;padding-top: .5rem;
     img {width: 3rem;}

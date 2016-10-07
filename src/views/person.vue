@@ -5,7 +5,7 @@
         <div class="weui-msg">
           <div class="weui-msg__icon-area">
             <div class="logo">
-              <img class="bounce" src="../assets/images/logo.png">
+              <img class="bounce" src="../../static/images/logo.png">
             </div>
           </div>
           <div class="weui-msg__text-area">
@@ -20,22 +20,22 @@
         </div>
       </div>
       <div class="weui-tabbar">
-          <a class="weui-tabbar__item" v-link="{ path: '/index' }">
-              <img src="../assets/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
-              <p class="weui-tabbar__label">Home</p>
-          </a>
-          <a class="weui-tabbar__item" v-link="{ path: '/search' }">
-              <img src="../assets/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
-              <p class="weui-tabbar__label">Search</p>
-          </a>
-          <a class="weui-tabbar__item" v-link="{ path: '/charts' }">
-              <img src="../assets/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
-              <p class="weui-tabbar__label">Charts</p>
-          </a>
-          <a class="weui-tabbar__item weui-bar__item_on" v-link="{ path: '/person' }">
-              <img src="../assets/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
-              <p class="weui-tabbar__label">Person</p>
-          </a>
+        <a class="weui-tabbar__item" v-link="{ path: '/index' }">
+            <img src="../../static/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+            <p class="weui-tabbar__label">Home</p>
+        </a>
+        <a class="weui-tabbar__item" v-link="{ path: '/search' }">
+            <img src="../../static/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+            <p class="weui-tabbar__label">Search</p>
+        </a>
+        <a class="weui-tabbar__item" v-link="{ path: '/charts' }">
+            <img src="../../static/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+            <p class="weui-tabbar__label">Charts</p>
+        </a>
+        <a class="weui-tabbar__item weui-bar__item_on" v-link="{ path: '/person' }">
+            <img src="../../static/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+            <p class="weui-tabbar__label">Person</p>
+        </a>
       </div>
     </div>
     <toast :options.sync="options" :show.sync="options.show"><toast>
@@ -66,6 +66,7 @@ module.exports = {
 }
 </script>
 <style lang="scss" scoped>
+  .weui-tab {height: 100vh;}
   .icon-box {text-align: center;}
   .weui-msg {
     padding-top: 36px;

@@ -13,19 +13,19 @@ module.exports = {
         id: 'banner',
         images: [
           {
-            src: 'http://cdn.shenmatouzi.com/wx/images/safe/1.png',
+            src: 'static/images/3.jpg',
             alt: '',
             href: ''
           },
           {
-            src: 'http://cdn.shenmatouzi.com/wx/images/safe/2.png',
+            src: 'static/images/2.jpg',
             alt: '',
             href: ''
           },
           {
-            src: 'http://cdn.shenmatouzi.com/wx/images/safe/3.png',
+            src: 'static/images/1.jpg',
             alt: '首页',
-            href: '/?#!/index'
+            href: './?#!/index'
           }
         ],
         fullScreen: true,
@@ -50,5 +50,6 @@ module.exports = {
 </script>
 
 <style lang="scss" scoped>
+  section {height: 100vh;}
   .swiper-container {width: 100%;height: 100%;}
 </style>
