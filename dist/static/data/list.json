@@ -1,0 +1,16 @@
+{
+  "code": "0",
+  "msg": "success",
+	"totalNum": "100",
+  "listSize": "10",
+  "data": {
+    "list": [
+      {"id": "0", "name": "A"},
+      {"id": "1", "name": "B"},
+      {"id": "2", "name": "C"},
+      {"id": "3", "name": "D"},
+      {"id": "4", "name": "E"},
+      {"id": "5", "name": "F"}
+    ]
+  }
+}

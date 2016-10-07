@@ -1,0 +1,39 @@
+// 变量集中存储文件
+
+$color_black:#000;
+$color_white:#fff;
+$color_red:#e62323;
+$color_grey:#f3f3f3;
+$color_dark_grey:#d9d9d9;
+$color_orange:#fa5900;
+$color_theme:#42b983;
+$color_yellow:#ff8d43;
+$color_blue:#4babf8;
+$color_coffee:#3c2723;
+$color_green:#76c64a;
+
+.color_black {color:$color_black !important;}
+.color_white {color:$color_white !important;}
+.color_red {color:$color_red !important;}
+.color_grey {color:$color_grey !important;}
+.color_dark_grey {color:$color_dark_grey !important;}
+.color_orange {color:$color_orange !important;}
+.color_theme {color:$color_theme !important;}
+.color_yellow {color:$color_yellow !important;}
+.color_blue {color:$color_blue !important;}
+.color_coffee {color:$color_coffee !important;}
+.color_green {color:$color_green !important;}
+
+.bg_white {background-color:$color_white !important;}
+.bg_red {background-color:$color_red !important;}
+.bg_grey {background-color:$color_grey !important;}
+.bg_dark_grey {background-color:$color_dark_grey !important;}
+.bg_orange {background-color:$color_orange !important;}
+.bg_theme {background-color:$color_theme !important;}
+.bg_yellow {background-color:$color_yellow !important;}
+.bg_blue {background-color:$color_blue !important;}
+.bg_coffee {color:$color_coffee !important;}
+.bg_green {background-color:$color_green !important;}
+
+$gap:0.32rem;
+$input_h:1.28rem;
