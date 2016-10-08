@@ -10,8 +10,7 @@ module.exports = {
   data: function () {
     return {
       options: {
-        show: true,
-        msg: '数据加载中'
+        show: true
       }
     }
   }

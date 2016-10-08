@@ -3,8 +3,8 @@
     <div id="toast" transition="fade" v-if="options.show">
       <div class="weui-mask_transparent"></div>
       <div class="weui-toast">
-          <i class="{{options.iconClass}}"></i>
-          <p class="weui-toast__content">{{options.msg}}</p>
+          <i class="weui-icon_toast {{options.iconClass || 'weui-icon-success-no-circle'}}"></i>
+          <p class="weui-toast__content">{{options.msg || '操作成功'}}</p>
       </div>
     </div>
   </div>
@@ -22,11 +22,9 @@ export default {
   },
   watch: {
     options () {
-      if (this.options.autoClose) {
-        setTimeout(() => {
-          this.close()
-        }, 2000)
-      }
+      setTimeout(() => {
+        this.close()
+      }, 2000)
     }
   }
 }

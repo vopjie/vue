@@ -3,11 +3,11 @@
     <div id="dialog" transition="zoom" v-if="options.show">
       <div class="weui-mask"></div>
       <div class="weui-dialog">
-          <div class="weui-dialog__hd"><strong class="weui-dialog__title">{{options.title}}</strong></div>
-          <div class="weui-dialog__bd">{{options.msg}}</div>
+          <div class="weui-dialog__hd"><strong class="weui-dialog__title">{{options.title || '温馨提示'}}</strong></div>
+          <div class="weui-dialog__bd">{{options.msg || '确认操作吗'}}</div>
           <div class="weui-dialog__ft">
-              <a v-if="options.confirm" href="javascript:;" class="weui-dialog__btn weui-dialog__btn_default" @click="cancelFunc(options.cancelFunc)">{{options.cancelTxt}}</a>
-              <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary" @click="confirmFunc(options.confirmFunc)">{{options.confirmTxt}}</a>
+              <a v-if="options.type == 'confirm'" href="javascript:;" class="weui-dialog__btn weui-dialog__btn_default" @click="cancelFunc(options.cancelFunc)">{{options.cancelTxt || '取消'}}</a>
+              <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary" @click="confirmFunc(options.confirmFunc)">{{options.confirmTxt || '确认'}}</a>
           </div>
       </div>
     </div>

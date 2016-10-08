@@ -119,7 +119,7 @@ module.exports = {
 </script>
 
 <style lang="scss">
-#scroller {height: 100vh;overflow-y: scroll;}
+#scroller {height: 100vh;overflow-y: scroll;-webkit-overflow-scrolling: touch;}
 .fr {float: right;}
 .data_wrap {min-height:100vh;}
 .scroller-wrap {

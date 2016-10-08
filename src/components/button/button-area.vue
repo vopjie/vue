@@ -1,3 +1,3 @@
 <template>
-<div class="weui_btn_area"><slot></div>
+<div class="weui-btn-area"><slot></div>
 </template>

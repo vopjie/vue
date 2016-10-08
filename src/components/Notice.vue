@@ -11,16 +11,6 @@
 
 <script>
 export default {
-  // data: function () {
-  //   return {
-  //     options: {
-  //       show: true,
-  //       autoClose: true,
-  //       msg: '2秒后自动关闭该消息！',
-  //       type: 'default'
-  //     }
-  //   }
-  // },
   props: {
     options: {}
   },

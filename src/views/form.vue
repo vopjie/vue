@@ -80,27 +80,21 @@ module.exports = {
         if (self.$validation_login.phone.invalid) {
           self.dialogOptions = {
             show: true,
-            title: '温馨提示',
-            msg: '请填写11位数正确的手机号',
-            confirmTxt: '知道了'
+            msg: '请填写11位数正确的手机号'
           }
           return false
         }
         if (self.$validation_login.password.invalid) {
           self.dialogOptions = {
             show: true,
-            title: '温馨提示',
-            msg: '密码应该为6-20位',
-            confirmTxt: '知道了'
+            msg: '密码应该为6-20位'
           }
           return false
         }
         if (self.$validation_login.agree.invalid) {
           self.dialogOptions = {
             show: true,
-            title: '温馨提示',
-            msg: '你还没有同意相关条款哦',
-            confirmTxt: '知道了'
+            msg: '你还没有同意相关条款哦'
           }
           return false
         }
@@ -109,8 +103,7 @@ module.exports = {
           return false
         } else {
           self.loadingOptions = {
-            show: true,
-            msg: '加载中'
+            show: true
           }
           // 验证通过做注册请求
           // self.$http.post('http://192.168.30.235:9999/rest/user/login', {'phone': self.phone, 'password': self.password}).then(function (response) {

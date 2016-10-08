@@ -21,10 +21,7 @@ module.exports = {
   methods: {
     showToast: function (event) {
       this.options = {
-        show: true,
-        autoClose: true,
-        msg: '操作成功',
-        iconClass: 'weui-icon-success-no-circle weui-icon_toast'
+        show: true
       }
     }
   }
